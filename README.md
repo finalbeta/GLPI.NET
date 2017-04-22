@@ -45,7 +45,6 @@ Example using GLPI.NET from Powershell:
 $GLPI = New-Object "GLPIApi.glpi" ([NullString]::Value, [NullString]::Value, $glpi_app_token, $glpi_user_token, $glpi_api_url);
 $GLPI.login();
 $responseObj = $GLPI.objectResponse("getActiveEntities", $null)
-$existingEntities = @{}
 foreach ( $data in $responseObj.result.active_entity.active_entities) {
    foreach ( $item in $data) {
        $entityDetails = $GLPI.objectResponse("Entity/$($item.Value)", $null)
