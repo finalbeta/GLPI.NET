@@ -1,5 +1,5 @@
 # GLPI.NET
-**GLPI.NET** is .NET Zabbix API library which is incredible easy to use thanks to C# dynamic objects.
+**GLPI.NET** is .NET GLPI API library which is incredible easy to use thanks to C# dynamic objects.
 
 Usage:
 ```
@@ -58,7 +58,7 @@ $GLPI.logout();
 
 > **Note:**
 
-> - GLPI allows a user to log in using basic auth or using an API token. Both methods are supported, but you shouldn't use both at the same time. Send null as a parameter for the method you don't require. You need to use login() method after creating Zabbix class and logout() after you are done with the API to make sure there are no open sessions left. 
+> - GLPI allows a user to log in using basic auth or using an API token. Both methods are supported, but you shouldn't use both at the same time. Send null as a parameter for the method you don't require. You need to use login() method after creating GLPI class and logout() after you are done with the API to make sure there are no open sessions left. 
 > - GLPI.NET uses Newtonsoft.Json library for json serialization and deserialization
 > - .NET 4.0, but you can compile to any version of .NET as long as it supports ExpandoObject and Newtonsoft.Json 
 > - Some GLPI api calls should be get or post. If you supply an ExpandoObject as a second parameter, it will be converted to json and it will be a post. if you supply null, it will be a get request. 
